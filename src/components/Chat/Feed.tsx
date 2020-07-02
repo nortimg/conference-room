@@ -7,11 +7,15 @@ interface IFeedProps {
 }
 
 const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
     overflow-y: scroll; 
+    padding: 20px 0; 
 `
 
 const Feed: React.FC<IFeedProps> = (props) => {
-    const messages = props.messages.map(m => (
+    const messages = props.messages.map((m, i) => (
         <Message
             author={m.author}
             text={m.text}
@@ -19,12 +23,9 @@ const Feed: React.FC<IFeedProps> = (props) => {
             time={m.time}
             fromMe={m.fromMe}
             photoURL={m.photoURL}
-            id={m.id}
-            key={m.id}
+            key={i}
         />
     ))
-
-    console.log(messages)
 
     return (
         <Wrapper>

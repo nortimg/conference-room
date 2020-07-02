@@ -6,14 +6,18 @@ const Avatar = styled.img`
     width: 36px; 
     height: 36px; 
     border-radius: 50%; 
+    object-fit: cover;
 `
 
 const Meta = styled.div`
-    margin-left: 4px; 
-    width: 100%; 
-    display: flex; 
-    justify-content: center;
-    flex-direction: column;
+    &:not(.meta_my) {
+        margin-left: 4px; 
+        width: 100%; 
+        display: flex; 
+        justify-content: center; 
+        flex-direction: column;
+    }
+
     h4, p {
         margin: 0; 
     }
@@ -27,11 +31,10 @@ const Meta = styled.div`
         font-size: 12px; 
     }
 
-    .meta {
-        &_my {
-            text-align: right; 
-            padding: 3px 0; 
-        }
+    .meta_my {
+        text-align: right; 
+        padding: 7px 0; 
+
     }
 `
 

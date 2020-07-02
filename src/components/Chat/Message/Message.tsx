@@ -5,7 +5,6 @@ import MessageContent from './MessageContent'
 
 
 export interface IMessageProps {
-    id: number
     author: string
     text: string
     date: string
@@ -14,21 +13,20 @@ export interface IMessageProps {
     photoURL: string 
 }
 
+const Wrapper = styled.div`
+    display: flex; 
+    max-width: 210px; 
+    flex-direction: ${(p: {flexDirection: string}) => p.flexDirection}; 
+`
+
 const Message: React.FC<IMessageProps> = (props) => {
 
     const flexDirection: string = props.fromMe
         ? 'column-reverse'
         : 'column'
 
-
-    const Wrapper = styled.div`
-        display: flex; 
-        max-width: 210px; 
-        flex-direction: ${flexDirection}; 
-    `
-
     return (
-        <Wrapper>
+        <Wrapper flexDirection={flexDirection}>
             <MessageMeta
                 fromMe={props.fromMe}
                 date={props.date}

@@ -4,6 +4,7 @@ import THEME from 'theme'
 
 const Quote = styled.div`
     display: flex; 
+    margin-top: 5px;
     position: relative;
     max-width: 210px; 
     justify-content: center; 
@@ -16,12 +17,15 @@ const Quote = styled.div`
     }
 `
 
-
 const tailSize = 3
-let Background = styled.div`
+
+const isFromMe = (yes: any, no: any) => (p: {fromMe: boolean}) => p.fromMe ? yes : no
+const Background = styled.div`
     width: 100%;
     height: 100%;  
     position: absolute; 
+    border-radius: ${isFromMe('5px 5px 0 5px', '0 5px 5px 5px')}; 
+    background-color: ${isFromMe(THEME.fluent.BLUE, THEME.fluent.LIGHT_GREY)}; 
 
     &::before {
         content: '';
@@ -31,28 +35,16 @@ let Background = styled.div`
         height: ${tailSize}px; 
         border-width: ${tailSize}px;
         border-style: solid; 
+        transform: ${isFromMe('translateY(100%)', 'translateY(-100%)')};
+        border-color: ${isFromMe(
+            THEME.fluent.BLUE + ' ' + THEME.fluent.BLUE + ' transparent transparent', 
+            'transparent transparent ' + THEME.fluent.LIGHT_GREY + ' ' + THEME.fluent.LIGHT_GREY
+        )};
+        ${isFromMe('right', 'left')}: 0;
+        ${isFromMe('bottom', 'top')}: 0; 
     }
 `
 
-const MyQuote = styled(Background)`
-    background-color: ${THEME.fluent.BLUE}; 
-    &::before {
-        transform: translateY(100%);
-        border-color: ${THEME.fluent.BLUE} ${THEME.fluent.BLUE} transparent transparent;
-        right: 0; 
-        bottom: 0;
-    }
-`
-
-const TalkerQuote = styled(Background)`
-    background-color: ${THEME.fluent.LIGHT_GREY}; 
-    &::before {
-        transform: translateY(-100%);
-        border-color: transparent transparent ${THEME.fluent.LIGHT_GREY} ${THEME.fluent.LIGHT_GREY};
-        left: 0; 
-        top: 0;
-    }
-`
 
 interface IMessageContent {
     fromMe: boolean
@@ -62,14 +54,14 @@ interface IMessageContent {
 
 const MessageContent: React.FC<IMessageContent> = (props) => {
 
-    Background = props.fromMe ? MyQuote : TalkerQuote
-
     return (
         <Quote>
             <p>
                 {props.text}
             </p>
-            <Background />
+            <Background
+                fromMe={props.fromMe}
+            />
         </Quote>
     )
 }
