@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-syntax-top-level-await": "^7.10.4",
     "jest-styled-components": "^7.0.2"
   }
 }

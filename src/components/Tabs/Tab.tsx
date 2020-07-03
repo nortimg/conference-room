@@ -16,7 +16,7 @@ interface ITabStyleProps {
     active: boolean
 }
 
-const tabColor = (p: ITabStyleProps) => p.active ? 'white' : THEME.fluent.SHADOW_BLUE
+const tabColor = (p: ITabStyleProps) => p.active ? 'white' : THEME.fluent.SHADOW_BLUE as string
 const Wrapper = styled.button`
     display: inline-block; 
     position: relative; 

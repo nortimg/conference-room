@@ -47,7 +47,7 @@ const Send = styled.div`
         border: 0; 
         outline: 0; 
         background-color: transparent; 
-        color: ${THEME.fluent.ICON_BLUE};
+        color: ${THEME.fluent.ICON_BLUE as string};
         font-weight: bold; 
         cursor: pointer;
     }

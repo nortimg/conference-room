@@ -3,13 +3,13 @@ import THEME from 'theme'
 
 const fontFace = (name: string, nameInFolder: string, fontWeight = 'normal', fontStyle = 'normal') => {
     return `
-      @font-face{
+      @font-face {
           font-family: "${name}";
-          src: url(${import(`assets/fonts/${name}/${nameInFolder}.ttf`)}) format("truetype"); 
+          src: url(${require(`assets/fonts/${name}/${nameInFolder}.ttf`)}) format("truetype"); 
           font-style: ${fontStyle};
           font-weight: ${fontWeight};
-      }
-  `;
+      } 
+  `
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -22,11 +22,11 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: 'Roboto'
+        font-family: 'Roboto', sans-serif
     }
 
     &::placeholder {
-        font-family: 'Roboto'; 
+        font-family: 'Roboto', sans-serif; 
         font-size: 13px; 
     }
 
@@ -41,6 +41,6 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     h4 {
-        color: ${THEME.fluent.DARK_BROWN}
+        color: ${THEME.fluent.DARK_BROWN as string}
     }
 `

@@ -12,6 +12,7 @@ const Wrapper = styled.div`
     align-items: center;
     overflow-y: scroll; 
     padding: 20px 0; 
+    background-color: #F5FAFC;
 `
 
 const Feed: React.FC<IFeedProps> = (props) => {

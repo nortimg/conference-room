@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Chat from './components/Chat/Chat'
-import { ITabProps } from 'components/Tabs/Tab'
+import { ITabProps } from './components/Tabs/Tab'
+import { IUserCardProps } from './components/Sidebar/UserCard/UserCard'
+import Sidebar from './components/Sidebar/Sidebar'
 
 const messages = [
   {
@@ -57,6 +59,11 @@ const tabs: ITabProps[] = [
   }
 ]
 
+const users: IUserCardProps[] = [
+  
+]
+
+
 const Container = styled.div`
   display: flex; 
   justify-content: space-between; 
@@ -67,6 +74,9 @@ const App: React.FC = () => {
 
   return (
     <Container>
+      <Sidebar 
+        users={users}
+      />
       <Chat
         messages={messages}
         tabs={tabs}

@@ -24,7 +24,7 @@ const Control = styled.button`
     cursor: pointer;
 
     &:hover svg path {
-        fill: ${THEME.fluent.ICON_DARK_BLUE}; 
+        fill: ${THEME.fluent.ICON_DARK_BLUE as string}; 
     }
 
     &:nth-child(2) {

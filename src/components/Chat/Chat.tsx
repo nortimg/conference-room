@@ -29,7 +29,7 @@ const Chat: React.FC<IChatProps> = (props) => {
         <Wrapper>
             <ChatTabBar 
                 tabs={props.tabs}
-                backgroundColor={THEME.fluent.PEACH}
+                backgroundColor={THEME.fluent.PEACH as string}
             />
             <Feed
                 messages={props.messages}
