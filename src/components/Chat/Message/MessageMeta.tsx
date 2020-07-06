@@ -34,7 +34,6 @@ const Meta = styled.div`
     .meta_my {
         text-align: right; 
         padding: 7px 0; 
-
     }
 `
 

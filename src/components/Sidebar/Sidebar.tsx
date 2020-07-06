@@ -1,23 +1,32 @@
 import React from 'react'
-import UserCard, { IUserCardProps } from './UserCard/UserCard'
+import styled from 'styled-components'
+
+import SidebarTabBar from './SidebarTabBar'
+import { IUserCardProps } from './UserCard/UserCard'
+import Feed from './Feed'
 
 interface ISidebarProps {
     users: IUserCardProps[]
 }
 
+const Wrapper = styled.div`
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    max-width: 240px; 
+    width: 100%;
+`
+
 const Sidebar: React.FC<ISidebarProps> = props => {
     // logic about users videos
 
     return (
-        <UserCard 
-            isVideoEnabled={true}
-            isMicroEnabled={false}
-            name={'Alexey'}
-            profileLink={'https://vk.com/nortimg'}
-            photoURL={'https://memepedia.ru/wp-content/uploads/2020/03/soft-girl-6-768x662.png'}
-            status={'online'}
-            role={'student'}
-        />
+        <Wrapper>
+            <SidebarTabBar />
+            <Feed 
+                users={props.users}
+            />
+        </Wrapper>
     )
 }
 

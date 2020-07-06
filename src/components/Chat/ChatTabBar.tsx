@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     display: flex; 
     align-items: center;
     background-color: ${(p: { backgroundColor: string }) => p.backgroundColor};
-    padding: 6px 14px 0 14px; 
+    padding: 0 14px 0 14px; 
 `
 
 const ChatTabBar: React.FC<IChatTabBarProps> = props => {

@@ -18,6 +18,7 @@ const THEME: ITHEME = {
         LIGHT_BLUE: '#D5E3EF',
         ICON_BLUE: '#2F548B',
         ICON_DARK_BLUE: '#00183C',
+        SECOND_BACKGROUND_COLOR: '#F5FAFC', 
 
         status: {
             online: '#39FF65',

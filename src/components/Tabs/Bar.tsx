@@ -11,11 +11,13 @@ export interface IBarProps {
 
 const Wrapper = styled.div`
     width: 100%; 
-    height: 30px; 
+    height: 36px; 
     background-color: ${(p: { backgroundColor: string }) => p.backgroundColor}; 
+    padding-top: 6px;
 `
 
 const Tabs = styled.div`
+    display: flex;
     height: 100%; 
 `
 

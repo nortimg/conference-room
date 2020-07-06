@@ -21,7 +21,7 @@ const messages = [
     time: '4:35',
     fromMe: true,
     photoURL: 'https://peopletalk.ru/wp-content/uploads/2016/11/1480331127.jpg'
-  }, 
+  },
   {
     author: 'Nikita',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis fermentum ipsum, vel lobortis enim blandit sed.`,
@@ -37,7 +37,7 @@ const messages = [
     time: '4:35',
     fromMe: true,
     photoURL: 'https://peopletalk.ru/wp-content/uploads/2016/11/1480331127.jpg'
-  }, 
+  },
   {
     author: 'Nikita',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis fermentum ipsum, vel lobortis enim blandit sed.`,
@@ -50,17 +50,40 @@ const messages = [
 
 const tabs: ITabProps[] = [
   {
-    title: 'RoomName', 
+    title: 'RoomName',
     active: true
-  }, 
+  },
   {
-    title: 'All', 
+    title: 'All',
     active: false
   }
 ]
 
 const users: IUserCardProps[] = [
-  
+  {
+    isMicroEnabled: true,
+    isVideoEnabled: true,
+    photoURL: 'https://www.shareicon.net/data/512x512/2016/05/29/772559_user_512x512.png',
+    name: 'Ivan',
+    role: 'student',
+    status: 'online'
+  },
+  {
+    isMicroEnabled: false,
+    isVideoEnabled: false,
+    photoURL: 'https://www.shareicon.net/data/512x512/2016/05/29/772559_user_512x512.png',
+    name: 'Ivan',
+    role: 'student',
+    status: 'online'
+  }, 
+  {
+    isMicroEnabled: false,
+    isVideoEnabled: false,
+    photoURL: 'https://www.shareicon.net/data/512x512/2016/05/29/772559_user_512x512.png',
+    name: 'Ivan',
+    role: 'student',
+    status: 'online'
+  }
 ]
 
 
@@ -74,7 +97,7 @@ const App: React.FC = () => {
 
   return (
     <Container>
-      <Sidebar 
+      <Sidebar
         users={users}
       />
       <Chat

@@ -11,7 +11,6 @@ interface IUserCardMeta {
     role: string
     isMicroEnabled: boolean
     isVideoEnabled: boolean
-    profileLink: string
     photoURL: string
     status: string
 }
@@ -21,10 +20,11 @@ const Wrapper = styled.div`
     width: 100%; 
     height: 48px; 
     background-color: inherit; 
-    transform: translateY(-100%); 
+    background-repeat: no-repeat; 
+    transform: ${(p: { isVideoEnabled: boolean }) => p.isVideoEnabled ? 'translateY(-100%)' : 'none'}; 
     opacity: .85;
     padding: 8px 20px 7px 6px;  
-    border-radius: 0 0 8px 8px; 
+    border-radius: ${(p: { isVideoEnabled: boolean }) => p.isVideoEnabled ? ' 0 0 8px 8px' : '8px'}; 
 
     button {
         outline: 0; 
@@ -107,7 +107,9 @@ const UserCardMeta: React.FC<IUserCardMeta> = props => {
     const roleSVG = require('assets/images/roles/' + props.role + '.svg')
 
     return (
-        <Wrapper>
+        <Wrapper
+            isVideoEnabled={props.isVideoEnabled}
+        >
             <Avatar
                 status={props.status}
             >

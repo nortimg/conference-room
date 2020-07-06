@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.js": "/static/js/main.3508cab3.chunk.js",
+    "main.js.map": "/static/js/main.3508cab3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bacffb38.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bacffb38.js.map",
+    "static/js/2.2a10859e.chunk.js": "/static/js/2.2a10859e.chunk.js",
+    "static/js/2.2a10859e.chunk.js.map": "/static/js/2.2a10859e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c2c881a35cda7ffb46d09f6c944f1b48.js": "/precache-manifest.c2c881a35cda7ffb46d09f6c944f1b48.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.2a10859e.chunk.js.LICENSE.txt": "/static/js/2.2a10859e.chunk.js.LICENSE.txt",
+    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.e07df86c.ttf",
+    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.11eabca2.ttf",
+    "static/media/expand_chat.0665e232.svg": "/static/media/expand_chat.0665e232.svg",
+    "static/media/font.cc1f709b.svg": "/static/media/font.cc1f709b.svg",
+    "static/media/microphone_disabled.a7d9cdfa.svg": "/static/media/microphone_disabled.a7d9cdfa.svg",
+    "static/media/planet.9b2fad0e.svg": "/static/media/planet.9b2fad0e.svg",
+    "static/media/right_arrow.5fbd5a64.svg": "/static/media/right_arrow.5fbd5a64.svg",
+    "static/media/settings.6acd3921.svg": "/static/media/settings.6acd3921.svg",
+    "static/media/smile.f025a4e2.svg": "/static/media/smile.f025a4e2.svg",
+    "static/media/student.svg": "/static/media/student.1b7cd0ac.svg",
+    "static/media/video_disabled.8ef255c4.svg": "/static/media/video_disabled.8ef255c4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bacffb38.js",
+    "static/js/2.2a10859e.chunk.js",
+    "static/js/main.3508cab3.chunk.js"
+  ]
+}
