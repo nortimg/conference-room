@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import SidebarTabBar from './SidebarTabBar'
 import { IUserCardProps } from './UserCard/UserCard'
 import Feed from './Feed'
+import Controls from './Controls'
 
 interface ISidebarProps {
     users: IUserCardProps[]
@@ -23,6 +24,7 @@ const Sidebar: React.FC<ISidebarProps> = props => {
     return (
         <Wrapper>
             <SidebarTabBar />
+            <Controls /> 
             <Feed 
                 users={props.users}
             />

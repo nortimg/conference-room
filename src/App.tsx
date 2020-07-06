@@ -82,7 +82,7 @@ const users: IUserCardProps[] = [
     photoURL: 'https://www.shareicon.net/data/512x512/2016/05/29/772559_user_512x512.png',
     name: 'Ivan',
     role: 'student',
-    status: 'online'
+    status: 'do_not_disturb'
   }
 ]
 
