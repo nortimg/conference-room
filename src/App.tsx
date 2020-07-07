@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+
+
 import Chat from './components/Chat/Chat'
 import { ITabProps } from './components/Tabs/Tab'
 import { IUserCardProps } from './components/Sidebar/UserCard/UserCard'
 import Sidebar from './components/Sidebar/Sidebar'
+import Board from 'components/Board/Board'
+
+
 
 const messages = [
   {
@@ -86,6 +91,13 @@ const users: IUserCardProps[] = [
   }
 ]
 
+const boardTabs: ITabProps[] = [
+  {
+    title: 'Whiteboard', 
+    active: true, 
+    closeButton: true
+  }
+]
 
 const Container = styled.div`
   display: flex; 
@@ -100,6 +112,9 @@ const App: React.FC = () => {
       <Sidebar
         users={users}
       />
+      <Board 
+        tabs={boardTabs}
+      /> 
       <Chat
         messages={messages}
         tabs={tabs}

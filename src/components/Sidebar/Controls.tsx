@@ -7,27 +7,24 @@ import { ReactComponent as MicrophoneSVG } from 'assets/images/controls/micropho
 import { ReactComponent as ShareScreenSVG } from 'assets/images/controls/share_screen.svg'
 import { ReactComponent as ShareLinkSVG } from 'assets/images/controls/share_link.svg'
 import THEME from 'theme'
+import Control from 'components/Control'
 
 interface ISidebarControlsProps { }
 
 const Wrapper = styled.div`
     display: flex; 
+    height: 48px;
     justify-content: space-between; 
     align-items: center;
+    align-content: center; 
     width: 100%; 
-    padding: 13.5px; 
     background-color: ${THEME.fluent.SECOND_BACKGROUND_COLOR as string}; 
     border-bottom: 2px solid ${THEME.fluent.LIGHT_GREY as string}; 
 `
 
-const Control = styled.button`
-    background-color: transparent; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    border: 0; 
-    outline: 0; 
-    cursor: pointer; 
+const SidebarControl = styled(Control)`
+    width: 48px;
+    height: 100%;
 `
 
 const Controls: React.FC<ISidebarControlsProps> = props => {
@@ -35,21 +32,21 @@ const Controls: React.FC<ISidebarControlsProps> = props => {
 
     return (
         <Wrapper>
-            <Control>
+            <SidebarControl>
                 <VideoSVG /> 
-            </Control>
-            <Control>
+            </SidebarControl>
+            <SidebarControl>
                 <MicrophoneSVG /> 
-            </Control>
-            <Control>
+            </SidebarControl>
+            <SidebarControl>
                 <ShareScreenSVG /> 
-            </Control>
-            <Control>
+            </SidebarControl>
+            <SidebarControl>
                 <ShareLinkSVG /> 
-            </Control>
-            <Control>
+            </SidebarControl>
+            <SidebarControl>
                 <AdjustVideosSVG /> 
-            </Control>
+            </SidebarControl>
         </Wrapper>
     )
 }
